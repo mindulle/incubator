@@ -1,8 +1,15 @@
 # Resources
+## Project Launch
+- [[inspiration]]
+- [[Project layout]]
+## Scraped
 - [[_Resources/Markup And Styling/index|Markup And Styling]]
 
-[[Applications]]
-[[Commands]]
-[[inspiration]]
-[[Project layout]]
-[[Resources]]
+## Customizations
+- [[Applications]]
+- [[Commands]]
+
+
+
+
+
