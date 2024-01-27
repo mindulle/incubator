@@ -256,7 +256,7 @@
 | Names | JS/TS | Go |
 | ---- | ---- | ---- |
 | ternary operator | `(condition ? ifTrue : ifFalse)` |  |
-|  |  |  |
+
 #### Assignment operators
 | Name | JS/TS | Go |
 | ---- | ---- | ---- |
