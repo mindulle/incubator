@@ -56,8 +56,7 @@ div.menu-bar li:hover > ul {
 ```
 
 For a beginner-level introduction to the syntax of selectors, see our
-[guide on CSS
-Selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors).
+[guide on CSS Selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors).
 Be aware that any [syntax](_Resources/Markup%20And%20Styling/css/syntax.md) error in a rule definition
 invalidates the entire rule. Invalid rules are ignored by the browser.
 Note that CSS rule definitions are entirely
