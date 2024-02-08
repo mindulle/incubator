@@ -128,8 +128,9 @@
   
 [[preload|Preloading content with rel="preload"]]
 - The `preload` value of the [[link|<link>]] element's [[rel]] attribute allows you to write declarative fetch requests in your HTML [[head|<head>]], specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
+
 ## [[_Resources/Markup And Styling/css/index|CSS]]
-### [[_Resources/Markup And Styling/css/index#Syntax and semantics|Syntax and semantics]]
+### [[_Resources/Markup And Styling/css/index#Syntax and semantics|Syntax]]
 | Syntax                                         | Literals or Example                                           | Syntax                                                                                                 | Literals                               |
 | ---------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------- |
 | [[at-rule\|At-rules]]                          | `@identifier (RULE) {}`                                       | [[_Resources/Markup And Styling/css/syntax#CSS declarations\|CSS syntax - declarations]]               | `:`                                    |

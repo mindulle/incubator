@@ -24,13 +24,49 @@ Built-ins
 ---------
 
  
-[JavaScript standard built-in
-objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects),
-along with their methods and properties.
+[JavaScript standard built-in objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects), along with their methods and properties.
 
+| Value Properties | Function properties | Fundamental Objects | Error objects |
+| ---- | ---- | ---- | ---- |
+| `globalThis` | `eval()` | `Object` | `Error` |
+| `Infinity` | `isFinite()` | `Function` | `AggregateError` |
+| `NaN` | `isNaN()` | `Boolean` | `EvalError` |
+| `undefined` | `parseFloat()` | `Symbol` | `RangeError` |
+|  | `parseInt()` |  | `ReferenceError` |
+|  | `decodeURI()` |  | `SyntaxError` |
+|  | `decodeURIComponent()` |  | `TypeError` |
+|  | `encodeURI()` |  | `URIError` |
+|  | `encodeURIComponent()` |  | `InternalError` |
 
+| Numbers and dates | Text processing | Indexed collections | Keyed collections |
+| ---- | ---- | ---- | ---- |
+| `Number` | `String` | `Array` | `Map` |
+| `BigInt` | `RegExp` | `Int8Array` | `Set` |
+| `Math` |  | `Uint8Array` | `WeakMap` |
+| `Date` |  | `Uint8ClampedArray` | `WeakSet` |
+|  |  | `Int16Array` |  |
+|  |  | `Uint16Array` |  |
+|  |  | `Int32Array` |  |
+|  |  | `Uint32Array` |  |
+|  |  | `BigInt64Array` |  |
+|  |  | `BigUint64Array` |  |
+|  |  | `Float32Array` |  |
+|  |  | `Float64Array` |  |
 
- 
+| Structured data | Managing memory | Control abstraction objects | Reflection | Internationalization |
+| ---- | ---- | ---- | ---- | ---- |
+| `ArrayBuffer` | `WeakRef` | `Iterator` | `Reflect` | `Intl` |
+| `SharedArrayBuffer` | `FinalizationRegistry` | `AsyncIterator` | `Proxy` | `Intl.Collator` |
+| `DataView` |  | `Promise` |  | `Intl.DateTimeFormat` |
+| `Atomics` |  | `GeneratorFunction` |  | `Intl.DisplayNames` |
+| `JSON` |  | `AsyncGeneratorFunction` |  | `Intl.DurationFormat` |
+|  |  | `Generator` |  | `Intl.ListFormat` |
+|  |  | `AsyncGenerator` |  | `Intl.Locale` |
+|  |  | `AsyncFunction` |  | `Intl.NumberFormat` |
+|  |  |  |  | `Intl.PluralRules` |
+|  |  |  |  | `Intl.RelativeTimeFormat` |
+|  |  |  |  | `Intl.Segmenter` |
+
 ### Value properties 
 
  
@@ -55,8 +91,7 @@ along with their methods and properties.
 -   [`encodeURI()`](global_objects/encodeuri)
 -   [`encodeURIComponent()`](global_objects/encodeuricomponent)
 -   [`escape()`](global_objects/escape) [Deprecated]
--   [`unescape()`](global_objects/unescape)
-    [Deprecated]
+-   [`unescape()`](global_objects/unescape) [Deprecated]
 
 
 
@@ -83,8 +118,7 @@ along with their methods and properties.
 -   [`SyntaxError`](global_objects/syntaxerror)
 -   [`TypeError`](global_objects/typeerror)
 -   [`URIError`](global_objects/urierror)
--   [`InternalError`](global_objects/internalerror)
-    [Non-standard]
+-   [`InternalError`](global_objects/internalerror) [Non-standard]
 
 
 
@@ -204,11 +238,19 @@ along with their methods and properties.
  
 Statements
 ----------
-
  
-[JavaScript statements and
-declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
+[JavaScript statements and declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
 
+| Control flow | Declaring variables | Functions and classes | Iterations | Others |
+| ---- | ---- | ---- | ---- | ---- |
+| `return` | `var` | `function` | `do...while` | Empty |
+| `break` | `let` | `function*` | `for` | Block |
+| `continue` | `const` | `async function` | `for...in` | Expression statement |
+| `throw` |  | `async function*` | `for...of` | `debugger` |
+| `if...else` |  | `class` | `for await...of` | `export` |
+| `switch` |  |  | `while` | `import` |
+| `try...catch` |  |  |  | label |
+|  |  |  |  | `with` (deprecated) |
 
 
  
@@ -280,12 +322,52 @@ Expressions and operators
 -------------------------
 
  
-[JavaScript expressions and
-operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators).
+[JavaScript expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators).
 
 
+| Primary expressions | Left-hand-side expressions | Increment and decrement | Unary operators | Arithmetic operators |
+| ---- | ---- | ---- | ---- | ---- |
+| `this` | Property accessors | `A++` | `delete` | `**` |
+| Literals | `?.` | `A--` | `void` | `*` |
+| `[]` | `new` | `++A` | `typeof` | `/` |
+| `{}` | `new.target` | `--A` | `+` | `%` |
+| `function` | `import.meta` |  | `-` | `+` |
+| `class` | `super` |  | `~` | `-` |
+| `function*` | `import()` |  | `!` |  |
+| `async function` |  |  | `await` |  |
+| `async function*` |  |  |  |  |
+| `/ab+c/i` |  |  |  |  |
+| `` `string` `` |  |  |  |  |
+| `( )` |  |  |  |  |
 
- 
+| Relational operators | Equality operators | Bitwise shift operators | Binary bitwise operators | Binary logical operators |
+| ---- | ---- | ---- | ---- | ---- |
+| `<` | `==` | `<<` | `&` | `&&` |
+| `>` | `!=` | `>>` | `\|` | `\|\|` |
+| `<=` | `===` | `>>>` | `^` | `??` |
+| `>=` | `!==` |  |  |  |
+| `instanceof` |  |  |  |  |
+| `in` |  |  |  |  |
+
+| Conditional (ternary) operator | Assignment operators | Yield operators | Spread syntax | Comma Operator |
+| ---- | ---- | ---- | ---- | ---- |
+| `(condition ? ifTrue : ifFalse)` | `=` | `yield` | `...obj` | `,` |
+|  | `*=` | `yield*` |  |  |
+|  | `/=` |  |  |  |
+|  | `%=` |  |  |  |
+|  | `+=` |  |  |  |
+|  | `-=` |  |  |  |
+|  | `<<=` |  |  |  |
+|  | `>>=` |  |  |  |
+|  | `>>>=` |  |  |  |
+|  | `&=` |  |  |  |
+|  | `^=` |  |  |  |
+|  | `\|=` |  |  |  |
+|  | `**=` |  |  |  |
+|  | `&&=` |  |  |  |
+|  | `\|\|=` |  |  |  |
+|  | `??=` |  |  |  |
+|  | `[a, b] = arr`,  `{ a, b } = obj` |  |  |  |
 ### Primary expressions 
 
  
@@ -483,8 +565,16 @@ Functions
 -   [getter](functions/get)
 -   [setter](functions/set)
 
-
-
+- `() => expression`
+- `function fnName(param1 = defaultValue1, /* …, */ paramN = defaultValueN) {}`
+- `function f(a, b, ...theArgs) {}`
+- `arguments[n]; // nth argument` 
+- `({ property(parameters) {}, })` 
+- `({ [expression](parameters) {}, })` 
+- `{ get prop() { /* … */ } }`, 
+- `{ get [expression]() { /* … */ } }` 
+- `{ set prop(val) { /* … */ } }` 
+- `{ set [expression](val) { /* … */ } }` 
  
 Classes
 -------
@@ -499,8 +589,12 @@ Classes
 -   [`static`](classes/static)
 -   [Static initialization blocks](classes/static_initialization_blocks)
 
-
-
+- `constructor(argument0, argument1, /* …, */ argumentN) { /* … */ }`
+- `class ChildClass extends ParentClass { /* … */ }`
+- (under proposal) in class, `#privateField;`   `#privateMethod() { // … }`
+- in class,  `instanceField;`, `static staticField;`
+- in class, class `static staticField;`
+- `class ClassWithSIB { static { // …  } }`
  
 Additional reference pages 
 --------------------------
@@ -520,5 +614,5 @@ Additional reference pages
 © 2005--2023 MDN contributors.\
 Licensed under the Creative Commons Attribution-ShareAlike License v2.5
 or later.\
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 

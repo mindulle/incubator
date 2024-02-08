@@ -18,8 +18,7 @@ Index
 -   [Constants](#pkg-constants)
 -   [Variables](#pkg-variables)
 -   [func AddExtensionType(ext, typ string) error](#AddExtensionType)
--   [func ExtensionsByType(typ string) (\[\]string,
-    error)](#ExtensionsByType)
+-   [func ExtensionsByType(typ string) (\[\]string, error)](#ExtensionsByType)
 -   [func FormatMediaType(t string, param map\[string\]string)
     string](#FormatMediaType)
 -   [func ParseMediaType(v string) (mediatype string, params
